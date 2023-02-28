@@ -5,7 +5,8 @@ public class Cuenta {
 	public double saldo;
 	public int agencia;
 	public int numero;
-	public  String titular;
+	public  Cliente titular = new Cliente();
+	
 	
 	public void depositar(double valor){
 		//esta cuenta 
