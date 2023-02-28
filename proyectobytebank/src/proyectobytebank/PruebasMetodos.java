@@ -3,12 +3,12 @@ package proyectobytebank;
 public class PruebasMetodos {
 	public static void main(String[] args) {
 		Cuenta miCuenta = new Cuenta();
-		miCuenta.saldo = 300;
+		miCuenta.setSaldo(300);
 		miCuenta.depositar(200);
-		System.out.println(miCuenta.saldo);
+		System.out.println(miCuenta.getSaldo());
 		
 		miCuenta.retirar(100);
-		System.out.println(miCuenta.saldo);
+		System.out.println(miCuenta.getSaldo());
 		
 		Cuenta cuentaJimena = new Cuenta();
 		cuentaJimena.depositar(1000);
@@ -19,8 +19,8 @@ public class PruebasMetodos {
 			System.out.println("transferencia exitosa");
 		}
 		
-		System.out.println(cuentaJimena.saldo);
-		System.out.println(miCuenta.saldo);
+		System.out.println(cuentaJimena.getSaldo());
+		System.out.println(miCuenta.getSaldo());
 		
 		
 	}

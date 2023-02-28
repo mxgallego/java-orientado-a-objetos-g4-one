@@ -3,16 +3,16 @@ package proyectobytebank;
 public class TestReferencia {
 	public static void main(String[] args) {
 		Cuenta primeraCuenta = new Cuenta(); 
-		primeraCuenta.saldo = 200;
+		primeraCuenta.setSaldo(200);
 		
 		Cuenta segundaCuenta = primeraCuenta;
-		segundaCuenta.saldo = 100;
+		segundaCuenta.setSaldo(200);
 		
-		System.out.println("Saldo primera cuenta: "+primeraCuenta.saldo);
-		System.out.println("Saldo segunda cuenta: "+segundaCuenta.saldo);
+		System.out.println("Saldo primera cuenta: "+primeraCuenta.getSaldo());
+		System.out.println("Saldo segunda cuenta: "+segundaCuenta.getSaldo());
 		
-		segundaCuenta.saldo +=400;
-		System.out.println("Saldo primera cuenta: "+primeraCuenta.saldo);
+		segundaCuenta.setSaldo(400);;
+		System.out.println("Saldo primera cuenta: "+primeraCuenta.getSaldo());
 
 		System.out.println(primeraCuenta);
 		System.out.println(segundaCuenta);

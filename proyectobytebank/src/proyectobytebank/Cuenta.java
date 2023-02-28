@@ -2,10 +2,10 @@ package proyectobytebank;
 
 public class Cuenta {
 	
-	public double saldo;
-	public int agencia;
-	public int numero;
-	public  Cliente titular = new Cliente();
+	private double saldo;
+	private int agencia;
+	private int numero;
+	private  Cliente titular = new Cliente();
 	
 	
 	public void depositar(double valor){
@@ -16,8 +16,8 @@ public class Cuenta {
 	
 	public boolean retirar(double valor) {
 		
-		if (this.saldo>=0) {
-			this.saldo = this.saldo - valor;
+		if (this.saldo>=valor) {
+			this.saldo -= valor;
 			return true;
 		}else {
 			return false;
@@ -35,4 +35,39 @@ public class Cuenta {
 		
 	}
 	
+	public double getSaldo() {
+		return this.saldo;
+	}
+	
+	public void setAgencia(int nuevaAgencia) {
+		if (agencia>0) {
+			this.agencia = nuevaAgencia;
+		}
+		System.out.println("no esta permitido valores negativos");
+		
+	}
+	
+	public int getAgencia() {
+		return agencia;
+	}
+	
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public Cliente getTitular() {
+		return titular;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 }
