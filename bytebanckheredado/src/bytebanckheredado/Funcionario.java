@@ -31,8 +31,8 @@ public class Funcionario {
 	private double salario;
 	
 	public double getBonificacion() {
-
-		return this.salario * 0.1;
+		//System.out.println("Ejecutado desde Funcionario");
+		return this.salario * 0.05;
 
 	}
 	public int getTipo() {
