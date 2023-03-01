@@ -11,7 +11,7 @@ public class Gerente extends Funcionario implements Autenticable {
 	@Override
 	public boolean iniciarSesion(String clave) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override

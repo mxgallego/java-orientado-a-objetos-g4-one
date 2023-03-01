@@ -2,20 +2,25 @@ package bytebanckheredado;
 
 public class Administrador extends Funcionario implements Autenticable {
 
+	private AutentecionUtil util;
+	
+	public Administrador() {
+		this.util = new AutentecionUtil();
+	}
+	
 	public double getBonificacion() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return this.getSalario();
 	}
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.util.iniciarSesion(clave);
 	}
 
 	@Override
 	public void setClave(String clave) {
-		// TODO Auto-generated method stub
+		this.util.setClave(clave);
 		
 	}
 
