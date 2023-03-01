@@ -17,9 +17,10 @@ public class Gerente extends Funcionario {
 		return clave;
 	}
 
-	public double getBonficacion() {
+	@Override
+	public double getBonificacion() {
 		System.out.println("Ejecutando desde Gerente: ");
-		return super.getSalario() + super.getBonificacion();
+		return super.getSalario();
 	}
 	
 }

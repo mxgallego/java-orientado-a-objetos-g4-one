@@ -1,6 +1,6 @@
 package bytebanckheredado;
 
-public class Funcionario {
+public abstract class Funcionario {
 	
 	private String nombre;
 	private String documento;
@@ -30,11 +30,7 @@ public class Funcionario {
 	}
 	private double salario;
 	
-	public double getBonificacion() {
-		//System.out.println("Ejecutado desde Funcionario");
-		return this.salario * 0.05;
-
-	}
+	public abstract double getBonificacion();
 	public int getTipo() {
 		return tipo;
 	}
