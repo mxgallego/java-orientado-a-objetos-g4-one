@@ -1,11 +1,10 @@
 package bytebanckheredado;
 
-public class Gerente extends Funcionario implements Autenticable {
-	
-	
+public class Administrador extends Funcionario implements Autenticable {
+
 	public double getBonificacion() {
-		System.out.println("Ejecutando desde Gerente: ");
-		return 1000;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -19,5 +18,5 @@ public class Gerente extends Funcionario implements Autenticable {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 }

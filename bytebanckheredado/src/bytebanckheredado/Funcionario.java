@@ -31,6 +31,7 @@ public abstract class Funcionario {
 	private double salario;
 	
 	public abstract double getBonificacion();
+	
 	public int getTipo() {
 		return tipo;
 	}
