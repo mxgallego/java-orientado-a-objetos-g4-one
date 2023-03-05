@@ -88,7 +88,7 @@ public abstract class Cuenta {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	
+	/*
 	public boolean saca(double valor) {
 		if (this.saldo>=valor) {
 			this.saldo -=valor;
@@ -96,5 +96,11 @@ public abstract class Cuenta {
 		} else {
 			return false;
 		}
+	}*/
+	public void saca(double valor) throws saldoInsuficienteException {
+		if (this.saldo < valor) {
+			throw new saldoInsuficienteException("No tienes saldo");
+		}
+		this.saldo -= valor;
 	}
 }
